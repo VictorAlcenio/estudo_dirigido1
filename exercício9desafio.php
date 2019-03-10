@@ -9,3 +9,16 @@ a. comprar apenas latas de 18 litros;
 b. comprar apenas galões de 3,6 litros;
 c. misturar latas e galões, de forma que o preço seja o menor. Acrescente 10% de folga e sempre
 arredonde os valores para cima, isto é, considere latas cheias. 
+
+print"Qual o tamanho em metros quadrados da área que será pintada?";
+$metros_quadrados=(float)fgets(STDIN);
+
+
+$quantidade_litros_lata= ($metros_quadrados/6);
+$quantidade_latas= $quantidade_litros_lata/18;
+
+if situacoes==1;
+  $preco_latas= $quantidade_latas*80
+    print"voce irá pagar $preco_latas pelas latas"
+else
+  
