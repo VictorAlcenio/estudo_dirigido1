@@ -24,7 +24,7 @@ $latas= 0;
 $galao= 0;
 $quantidade_latas= 0;
 $quantidade_galao= 0;
------------------------------------------------------
+//-----------------------------------------------------
 $valor_lata_menorpreco= 0;
 $valor_galao_menorpreco= 0;
 $lata_menorpreco= 0;
@@ -38,7 +38,7 @@ $quantidade_galao_menorpreco= 0;
   $valor_latas= $valor_latas + 80;
   $quantidade_latas= $quantidade_latas + 1;
 }
-print "\n Para pintar $metros_quadrados metro(s) quadrato(s) poderá ser efetuada a compra de $quantidade_latas lata(s) de 18L, custando assim, R$ $valor_latas";
+print "\n Para conseguir pintar $metros_quadrados metro(s) quadrato(s) poderá comprar $quantidade_latas lata(s) de 18L, que irá pagar, R$ $valor_latas";
 
   while ($galao < $quantidade_litros) {
   
@@ -46,7 +46,7 @@ print "\n Para pintar $metros_quadrados metro(s) quadrato(s) poderá ser efetuad
   $valor_galao= $valor_galao + 25;
   $quantidade_galao= $quantidade_galao + 1;
 }
-print "\n Para pintar $metros_quadrados metro(s) quadrato(s) poderá ser efetuada a compra de $quantidade_galao galão(ões) de 3,6L, custando assim, R$ $valor_galao";
+print "\n Para conseguir pintar $metros_quadrados metro(s) quadrato(s) poderá comprar $quantidade_galao galão(ões) de 3,6L, que irá pagar, R$ $valor_galao";
 
   while ( $quantidade_litros > 0){
     while ( $quantidade_litros >= 18) {
@@ -54,15 +54,14 @@ print "\n Para pintar $metros_quadrados metro(s) quadrato(s) poderá ser efetuad
       $quantidade_lata_menorpreco = $quantidade_lata_menorpreco + 1;
       $quantidade_litros= $quantidade_litros  - 18;  
   }
-      $galao_menorpreco= $galao_menorpreco   + 3.6;
+      $galao_menorpreco= $galao_menorpreco + 3.6;
       $valor_galao_menorpreco= $valor_galao_menorpreco  + 25;
       $quantidade_galao_menorpreco= $quantidade_galao_menorpreco + 1;
       $quantidade_litros= $quantidade_litros  - 3.6;  
   
 }
 $valor_total_compra = $valor_galao_menorpreco + $valor_lata_menorpreco;
-print "\n Para pintar $metros_quadrados metro(s) quadrato(s) poderá ser efetuada a compra de $quantidade_lata_menorpreco lata(s) de 18L, junto de $quantidade_galao_menorpreco galão(ões) de 3,6L custando assim, R$ $valor_total_compra \n";
+print "\n Para conseguir pintar $metros_quadrados metro(s) quadrato(s) poderá comprar $quantidade_lata_menorpreco lata(s) de 18L, com $quantidade_galao_menorpreco galão(ões) de 3,6L pagando assim, R$ $valor_total_compra \n";
 echo "\n Está sendo levado em consideração um acréscimo de 10% do valor total da área \n";
-
 
   
