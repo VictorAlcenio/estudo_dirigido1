@@ -11,37 +11,55 @@
 //arredonde os valores para cima, isto é, considere latas cheias. 
 
 print "Qual o tamanho em metros quadrados da área que será pintada? ";
-$metrosquadrados = (float)fgets(STDIN);
+$metros_quadrados = (float)fgets(STDIN);
 
 
 
 //lata
-$latapreco = 80;
-$latasrendimento = 108; //18*6
+$lata_preco = 80;
+$latas_rendimento = 108; //18*6
 
 //galao
-$galaopreco = 25;
-$galaorendimento = 21.6; //6*3.6
+$galao_preco = 25;
+$galao_rendimento = 21.6; //6*3.6
 
 
 // a)
-$latasquantidade = ceil($metrosquadrados/$latasrendimento);
-$latacusto = $latasquantidade * $latapreco;
+$latas_quantidade = ceil($metros_quadrados/$latas_rendimento);
+$lata_custo = $latas_quantidade * $lata_preco;
 
-print "\nSerá necessário $latasquantidade lata(s) ao custo de $latacusto reais \n";
+print "\nSerá necessário $latas_quantidade lata(s) ao custo de $lata_custo reais \n";
 
 print "--------------------------------------------------------------------------\n";
 
 // b)
 
-$galaoquantidade = ceil($metrosquadrados/$galaorendimento);
-$galaocusto = $galaoquantidade * $galaopreco;
+$galao_quantidade = ceil($metros_quadrados/$galao_rendimento);
+$galao_custo = $galao_quantidade * $galao_preco;
 
-print "Será necessário $galaoquantidade galão(oẽs) ao custo de $galaocusto reais \n";
+print "Será necessário $galao_quantidade galão(oẽs) ao custo de $galao_custo reais \n";
 
 print "--------------------------------------------------------------------------\n";
 
 // c)
+
+$latas_quantidade = (int) ($metros_quadrados/$latas_rendimento);
+$latas_resto = $metros_quadrados % $latas_rendimento;
+$galao_custo = ceil($latas_resto/$galao_rendimento);
+
+$total_custo = $latas_quantidade * $lata_custo + $galao_quantidade * $galao_custo;
+
+print "Será necessário $latas_quantidade latas e $galao_quantidade galao(oes)\n";
+print "O custo total foi de $total_custo reais";
+
+
+?>
+
+
+
+
+
+
 
 
 
