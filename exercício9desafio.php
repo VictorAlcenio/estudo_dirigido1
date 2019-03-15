@@ -10,5 +10,38 @@
 //c. misturar latas e galões, de forma que o preço seja o menor. Acrescente 10% de folga e sempre
 //arredonde os valores para cima, isto é, considere latas cheias. 
 
+print "Qual o tamanho em metros quadrados da área que será pintada? ";
+$metrosquadrados = (float)fgets(STDIN);
 
-  
+
+
+//lata
+$latapreco = 80;
+$latasrendimento = 108; //18*6
+
+//galao
+$galaopreco = 25;
+$galaorendimento = 21.6; //6*3.6
+
+
+// a)
+$latasquantidade = ceil($metrosquadrados/$latasrendimento);
+$latacusto = $latasquantidade * $latapreco;
+
+print "\nSerá necessário $latasquantidade lata(s) ao custo de $latacusto reais \n";
+
+print "--------------------------------------------------------------------------\n";
+
+// b)
+
+$galaoquantidade = ceil($metrosquadrados/$galaorendimento);
+$galaocusto = $galaoquantidade * $galaopreco;
+
+print "Será necessário $galaoquantidade galão(oẽs) ao custo de $galaocusto reais \n";
+
+print "--------------------------------------------------------------------------\n";
+
+// c)
+
+
+
